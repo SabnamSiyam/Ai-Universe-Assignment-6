@@ -12,22 +12,34 @@
 </head>
 
 <body>
+    <!-- header Section -->
     <header class="text-center">
         <h1 class=" text-4xl mt-10 font-bold">AI Universe Hub</h1>
         <button class="btn btn-error my-5 text-white">Sort By Date</button>
     </header>
 
     <main class="bg-red-100">
+
+        <!-- Loader -->
+        <section id="loader" class="text-center h-72 hidden">
+            <span class="loading loading-spinner loading-lg text-success mt-20"></span>
+        </section>
         <section class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 " id="container">
         </section>
+
+        <!-- Buttons -->
         <div class="mx-auto text-center mt-5">
-            <button id="btn-seeMore" class="btn btn-error my-5 text-white ">See More</button>
+            <button onclick="seeMoredata()" id="btn-seeMore" class="btn btn-error my-5 text-white ">See More</button>
+            <button onclick="seeLessData()" id="btn-seeLess" class="btn btn-error my-5 text-white hidden ">See
+                Less</button>
         </div>
     </main>
 
+    <!-- scripts -->
     <script src="js/index.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/421a672f1e.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>
