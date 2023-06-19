@@ -16,7 +16,7 @@ const showAiData = (data) => {
     const { name, image, published_in, features, id } = Ai;
     const div = document.createElement("div");
     div.innerHTML = `
-        <div class="card shadow-xl bg-slate-100 rounded-2xl h-full  ">
+        <div class="card shadow-2xl bg-zinc-200 rounded-2xl h-full  ">
         <figure class="px-10 max-h-80 pt-10">
             <img src="${image}" class="rounded-2xl" />
           </figure>
@@ -32,7 +32,7 @@ const showAiData = (data) => {
             <h2 class="card-title font-bold"> ${name}</h2>
             <div class="flex justify-between">
             <div><i class="fa-solid fa-calendar-days">  ${published_in}</i></div>
-            <div><i class="fa-solid fa-arrow-right btn" style="color: #EB5757;"></i></div>
+            <div><i onclick="my_modal_4.showModal()" class="fa-solid fa-arrow-right btn bg-zinc-300 p-4 roudnded-2xl" style="color: #EB5757;"></i></div>
             </div>
           </div>
       </div>
