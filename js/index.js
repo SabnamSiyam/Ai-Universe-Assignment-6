@@ -129,7 +129,7 @@ const showAiDetails = (AiData) => {
 <div class="modal-action">
 <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
         </div>
-        <div class="grid grid-cols-2 gap-5 rounded-4xl     ">
+        <div class="grid  lg:grid-cols-2 md:grid-cols-1 grid-cols-1 gap-5 rounded-4xl     ">
             <div class="  rounded-2xl p-5 shadow-2xl bg-red-200 ">
                 <div class="text-xl font-bold p-3 ">${description}</div>
                     <div class="grid grid-cols-3 gap-3 font-semibold mt-5">
@@ -216,6 +216,8 @@ const showAiDetails = (AiData) => {
 // ------------------------------------
 // For showing data by datewise:
 const showAiData2 = (data) => {
+  emtyInnerHTML2();
+
   loader(true);
   data.sort((a, b) => {
     const dateA = new Date(a.published_in);
@@ -261,11 +263,12 @@ const showAiData2 = (data) => {
 const SortByDate = () => {
   setTimeout(loader, 500);
   setTimeout(emtyInnerHTML, 250);
+  // emtyInnerHTML();
   const SortContainer = document.getElementById("container-sort");
   const showSortContainer = SortContainer.classList.remove("hidden");
   setTimeout(showSortContainer, 250);
-  // const Container=document.getElementById('container');
-  // Container.classList.add('hidden');
+  const Container = document.getElementById("container");
+  Container.classList.add("hidden");
   loader(true);
 };
 
