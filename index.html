@@ -11,11 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-slate-300" >
+<body class="bg-slate-300">
+
     <!-- header Section -->
     <header class="text-center">
         <h1 class=" text-4xl p-6 font-bold">AI Universe Hub</h1>
-        <button class="btn btn-error my-5 text-white">Sort By Date</button>
+
+        <!-- sort by btn -->
+        <div> <button onclick="SortByDate()" class="btn btn-error my-5 text-white">Sort By Date</button></div>
     </header>
     <main>
 
@@ -23,79 +26,30 @@
         <section id="loader" class="text-center h-72 hidden">
             <span class="loading loading-spinner loading-lg text-success mt-20"></span>
         </section>
-        <section class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 " id="container">
+        <section class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5" id="container">
+        </section>
+        <section class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 hidden" id="container-sort">
         </section>
 
         <!-- - Modal------ -->
-        <section class="modalContainer ">
-            <dialog id="my_modal_4" class="modal  ">
-                <form method="dialog" class="modal-box mx-auto h-auto max-w-3xl bg-slate-300 ">
-                    <div class="modal-action">
-                        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                    </div>
-                    <div class="grid grid-cols-2 gap-5 rounded-4xl   ">
-                        <div class="  rounded-2xl p-5 shadow-2xl bg-red-200 ">
-                            <div class="text-lgl font-semibold p-3 ">ChatGPT is an AI-powered chatbot platform that uses
-                                OpenAI's GPT technology to simulate human conversation.</div>
-                            <div class="grid grid-cols-3 gap-4 font-semibold">
-                                <div class="text-[#03A30A] p-2 shadow-2xl rounded-xl">$10/month
-                                    Basic</div>
-                                <div class="text-[#F28927] p-2 shadow-2xl rounded-xl">$50/month
-                                    Pro</div>
-                                <div class="text-[#EB5757]  p-2 shadow-2xl rounded-xl">Contactus Enterprise</div>
-                            </div>
-                            <div class="grid grid-cols-2 p-3">
-                                <div>
-                                    <h2 class="text-xl font-bold">Features</h2>
-                                    <li>FB Messenger</li>
-                                    <li>Slack</li>
-                                    <li> Telegram</li>
-                                </div>
-                                <div>
-                                    <h2 class="text-xl font-bold">Integrations</h2>
-                                    <div>
-                                        <li>FB Messenger</li>
-                                        <li>Slack</li>
-                                        <li> Telegram</li>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="relative  rounded-2xl p-5 shadow-2xl bg-red-200">
-                            <div><img class="rounded-xl "
-                                    src="https://assets.website-files.com/6344c9cef89d6f2270a38908/64148ed756708f9b82464c96_image-of-hand-holding-an-ai-face-looking-at-the-words-chatgpt-openai.webp"
-                                    alt=""></div>
-                            <div class="text-center rounded-md p-4">
-                                <h2 class="text-lg font-bold">Hi, how are you doing today?</h2>
-                                <p>I'm doing well, thank you for asking. How can I assist you today?</p>
-                            </div>
-                            <div class="absolute right-2 top-2">
-                                <P class="bg-[#EB5757] rounded-md mt-4 me-6 shadow-2xl">94% accuracy</P>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </form>
-            </dialog>
+        <section id="modal-container">
 
         </section>
 
         <!-- Buttons -->
         <div class="mx-auto text-center mt-5">
             <button onclick="seeMoredata()" id="btn-seeMore" class="btn btn-error my-5 text-white ">See More</button>
+
             <button onclick="seeLessData()" id="btn-seeLess" class="btn btn-error my-5 text-white hidden ">See
                 Less</button>
         </div>
         </section>
-
     </main>
 
     <!-- scripts -->
     <script src="js/index.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/421a672f1e.js" crossorigin="anonymous"></script>
-
 </body>
 
 </html>
